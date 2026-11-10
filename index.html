@@ -424,7 +424,12 @@ function show(v){
 document.querySelectorAll("[data-goto]").forEach(b=>b.addEventListener("click",()=>{location.hash=b.dataset.goto;}));
 window.addEventListener("hashchange",()=>show(location.hash.slice(1)));
 /* Dış bağlantılar her zaman yeni sekmede açılsın */
-document.addEventListener("click",e=>{const a=e.target.closest('a[href^="http"]');if(!a||e.defaultPrevented)return;e.preventDefault();e.stopPropagation();const w=window.open(a.href,"_blank","noopener");if(!w)location.href=a.href;},true);
+document.addEventListener("click",e=>{
+  const a=e.target.closest('a[href^="http"]'); if(!a||e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey) return;
+  const w=window.open(a.href,"_blank");           // yeni sekme açıldıysa
+  if(w){ try{w.opener=null;}catch(_){} e.preventDefault(); }  // mevcut sekmede ayrıca açılmasın
+  // açılamadıysa tarayıcı target="_blank" ile kendisi açar
+},true);
 show(location.hash.slice(1));
 </script>
 </body>
