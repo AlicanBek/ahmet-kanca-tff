@@ -2,476 +2,335 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ahmet Kanca · Maç Arşivi</title>
 <meta name="description" content="Bakırköyspor ve Zeytinburnuspor formalarıyla 1990-1995 yılları arasında oynanan resmi maçların, gollerin ve video kayıtlarının arşivi.">
 <meta property="og:title" content="Ahmet Kanca · Maç Arşivi (1990-1995)">
 <meta property="og:description" content="Bakırköyspor ve Zeytinburnuspor dönemine ait 117 resmi maç, 11 gol ve 66 maçın video kaydı.">
 <meta property="og:image" content="https://i.ytimg.com/vi/6Qo5cxfP-Cg/hqdefault.jpg">
 <meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#efede8">
 <style>
 :root{
-  --bg:#f5f3ee; --surface:#ffffff; --surface-2:#faf8f4; --ink:#1c1b19; --ink-2:#4a4740; --ink-3:#7a766c;
-  --line:#e2ddd2; --line-2:#efebe3;
-  --bk:#1f6b47; --bk-soft:#e6f0ea; --zb:#1d4f8a; --zb-soft:#e5edf7;
-  --goal:#a8641a; --goal-soft:#fbf0e1; --assist:#6b4fa0; --assist-soft:#efeaf7;
-  --red:#b3261e; --red-soft:#fbe9e7; --cap:#22577a;
-  --shadow:0 1px 2px rgba(28,27,25,.05),0 4px 16px rgba(28,27,25,.05);
-  --serif:"Source Serif 4",Georgia,serif; --sans:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
-}
-@media (prefers-color-scheme:dark){
-  :root{
-    --bg:#141412; --surface:#1d1c1a; --surface-2:#22211e; --ink:#eeebe4; --ink-2:#c4c0b6; --ink-3:#8f8a7f;
-    --line:#34322d; --line-2:#2a2925;
-    --bk:#5cbf8d; --bk-soft:#1d2e25; --zb:#7aa8e0; --zb-soft:#1c2633;
-    --goal:#e2a35a; --goal-soft:#33281b; --assist:#b49ae0; --assist-soft:#2a2433;
-    --red:#ef7b72; --red-soft:#3a201e; --cap:#86b8dc;
-    --shadow:none;
-  }
+  color-scheme:light;
+  --bg:#efede8; --card:#fff; --ink:#1c1c1c; --ink-2:#444; --muted:#7d7a74; --line:#ece9e2; --soft:#f6f5f2;
+  --bk:#1d6b43; --bk-2:#0f3a24; --bk-bg:#e3f1e8; --zb:#1f4f93; --zb-2:#0f2550; --zb-bg:#e6eefa;
+  --gold:#f6b51e; --gold-bg:#fdf4dc; --gold-ink:#6b4e00;
+  --win:#2e9d5b; --draw:#a3a09a; --loss:#d0453a;
+  --hero:linear-gradient(160deg,#141414 0%,#121815 55%,#0f3a24 100%);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
-a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-@media (max-width:600px){.wrap{padding:0 16px}}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+a{color:inherit;text-decoration:none}
+main{max-width:560px;margin:0 auto;padding:calc(14px + env(safe-area-inset-top)) 12px calc(100px + env(safe-area-inset-bottom))}
+.view[hidden]{display:none}
+.label{font-size:12px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);font-weight:700;margin:24px 4px 8px;display:flex;justify-content:space-between;align-items:baseline}
+.label small{letter-spacing:0;text-transform:none;font-weight:500;font-size:12px}
+h1{margin:6px 4px 0;font-size:26px;font-weight:800;letter-spacing:-.01em}
+.sub{margin:2px 4px 0;color:var(--muted);font-size:13.5px}
+.card{background:var(--card);border-radius:16px;padding:14px 16px;margin-bottom:10px}
 
 /* Hero */
-header.hero{border-bottom:1px solid var(--line);background:var(--surface)}
-.hero-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center;padding-top:56px;padding-bottom:48px}
-.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin:0 0 12px}
-h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,6vw,64px);line-height:1.02;margin:0 0 16px;letter-spacing:-.01em}
-.lede{font-size:18px;color:var(--ink-2);max-width:54ch;margin:0 0 24px}
-.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--line);margin:0}
-.facts div{padding:12px 0;border-bottom:1px solid var(--line)}
-.facts div:nth-child(odd){padding-right:16px}
-.facts dt{font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em}
-.facts dd{margin:2px 0 0;font-weight:500}
-.mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;border-radius:14px;overflow:hidden}
-.mosaic a{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;background:var(--line)}
-.mosaic img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85);transition:transform .4s ease}
-.mosaic a:hover img{transform:scale(1.05)}
-.mosaic span{position:absolute;left:6px;bottom:6px;font-size:11px;background:rgba(0,0,0,.62);color:#fff;padding:2px 6px;border-radius:4px}
-.mosaic-cap{font-size:12px;color:var(--ink-3);margin-top:8px}
-@media (max-width:600px){.mosaic{grid-template-columns:repeat(2,1fr)}.mosaic span{font-size:10.5px;right:6px;line-height:1.3}}
-@media (max-width:860px){.hero-grid{grid-template-columns:1fr;gap:28px;padding-top:36px;padding-bottom:32px}}
+.hero{background:var(--hero);color:#fff;border-radius:18px;padding:20px 18px 16px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:linear-gradient(90deg,var(--bk) 50%,var(--zb) 50%)}
+.hero::after{content:"";position:absolute;right:-60px;bottom:-60px;width:200px;height:200px;border-radius:50%;border:2px solid rgba(255,255,255,.06)}
+.hero .k{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:700}
+.hero .name{font-size:30px;font-weight:800;margin-top:6px;letter-spacing:-.01em}
+.hero .meta{color:#bdbdbd;font-size:14px;margin-top:4px}
+.tz{display:grid;grid-template-columns:repeat(3,1fr);margin-top:14px;border-radius:10px;background:rgba(255,255,255,.07);overflow:hidden}
+.tz div{text-align:center;padding:8px 4px 9px}
+.tz div+div{border-left:1px solid rgba(255,255,255,.08)}
+.tz span{display:block;font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.tz b{font-size:22px;font-weight:800;font-variant-numeric:tabular-nums}
+.strip{display:flex;justify-content:space-between;align-items:center;margin-top:8px;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,.08)}
+.strip .cl{font-size:10px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.strip b{font-size:15px;font-weight:800}
+.hero .go{display:inline-flex;align-items:center;gap:6px;margin-top:14px;background:var(--gold);color:#1c1c1c;border-radius:999px;padding:7px 14px;font-size:13.5px;font-weight:700;border:0;cursor:pointer}
 
-/* Stats strip */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:32px 0 8px}
-.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow)}
-.stat b{display:block;font-family:var(--serif);font-size:34px;line-height:1.1;font-weight:600}
-.stat span{font-size:13px;color:var(--ink-2)}
-@media (max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}}
+/* Club boxes */
+.stats{display:flex;gap:10px;margin-top:10px}
+.stat{flex:1;border-radius:14px;padding:12px 14px;min-width:0;color:#fff;position:relative;overflow:hidden}
+.stat.bk{background:linear-gradient(150deg,#163d29,#0d1f16 70%,#1d6b43)}
+.stat.zb{background:linear-gradient(150deg,#1a2f55,#0e1830 70%,#1f4f93)}
+.stat .c{display:flex;align-items:center;gap:7px;font-size:10.5px;text-transform:uppercase;letter-spacing:.3px;font-weight:700;color:rgba(255,255,255,.85);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.stat .c img{width:22px;height:22px;border-radius:50%;background:#fff;padding:2px;object-fit:contain;flex:0 0 22px}
+.stat .v{font-size:22px;font-weight:800;margin-top:6px}
+.stat .v small{font-size:13px;font-weight:600;color:rgba(255,255,255,.7)}
+.stat .g{font-size:12px;margin-top:1px;color:rgba(255,255,255,.75)}
 
-section{margin:48px 0}
-h2{font-family:var(--serif);font-size:28px;font-weight:600;margin:0 0 6px;letter-spacing:-.005em}
-.sec-intro{color:var(--ink-2);margin:0 0 20px;max-width:70ch}
+/* Goal form tiles */
+.form{background:var(--card);border-radius:16px;padding:12px 12px 14px}
+.form .t{font-size:12px;font-weight:700;color:var(--ink-2);margin:0 4px 10px}
+.form .t span{color:var(--muted);font-weight:500}
+.tiles{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:4px;scrollbar-width:none}
+.tiles::-webkit-scrollbar{display:none}
+.tile{flex:0 0 106px;scroll-snap-align:start;background:var(--soft);border-radius:12px;padding:10px 6px 9px;text-align:center;border-bottom:3px solid var(--draw);position:relative}
+.tile.G{border-bottom-color:var(--win);background:#eef7f1}
+.tile.M{border-bottom-color:var(--loss);background:#fbefee}
+.tile img{width:28px;height:28px;object-fit:contain;margin:0 auto}
+.tile .s{font-size:17px;font-weight:800;margin-top:6px;font-variant-numeric:tabular-nums}
+.tile .o{font-size:11.5px;color:var(--ink-2);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile .m{font-size:11px;color:var(--muted);margin-top:3px}
+.tile .p{position:absolute;top:6px;right:6px;width:16px;height:16px;border-radius:50%;background:#1c1c1c;color:#fff;display:grid;place-items:center}
+.tile .p svg{width:6px;height:6px;fill:#fff;margin-left:1px}
 
-/* Summary table */
-.tbl{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
-.tbl th,.tbl td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line-2);vertical-align:top}
-.tbl thead th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);font-weight:500;background:var(--surface-2);border-bottom:1px solid var(--line)}
-.tbl tbody tr:last-child td{border-bottom:0}
-.num{font-variant-numeric:tabular-nums}
-.summary td.num,.summary th.num{text-align:right}
-.club-dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px;vertical-align:1px}
-.c-bk{background:var(--bk)} .c-zb{background:var(--zb)}
+/* Moment cards */
+.mc .top{display:flex;justify-content:space-between;gap:8px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.6px}
+.mc .top .lg{color:var(--bk)} .mc.zb .top .lg{color:var(--zb)}
+.mc .top .venue{color:var(--muted);font-weight:500;text-transform:none;letter-spacing:0;white-space:nowrap}
+.mc .teams{font-size:18px;font-weight:800;margin-top:6px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pill{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;vertical-align:2px}
+.pill.goal{background:var(--gold-bg);color:var(--gold-ink)}
+.pill.cap{background:#ececec;color:#333}
+.mc .desc{color:#333;margin-top:6px}
+.mc .foot{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+.play{display:inline-flex;align-items:center;gap:6px;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-size:13px;font-weight:600;white-space:nowrap}
+.play svg{width:9px;height:9px;fill:currentColor}
+.play.dark{background:#1c1c1c;color:#fff;border-color:#1c1c1c}
+.play b{font-variant-numeric:tabular-nums}
 
-/* Highlights gallery */
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
-.card .thumb{position:relative;display:block;aspect-ratio:16/9;background:var(--line);overflow:hidden}
-.card .thumb img{width:100%;height:100%;object-fit:cover;display:block}
-.play{position:absolute;inset:auto auto 10px 10px;background:rgba(0,0,0,.7);color:#fff;font-size:12px;font-weight:500;padding:4px 9px;border-radius:999px}
-.card-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
-.card-date{font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.05em}
-.card-title{font-weight:600;line-height:1.35}
-.card-text{font-size:14px;color:var(--ink-2)}
+/* Matches view */
+.controls{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0 8px;margin:0 -12px;padding-left:12px;padding-right:12px}
+.chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;border:0;background:var(--card);color:var(--ink-2);font:600 13px inherit;font-family:inherit;padding:8px 13px;border-radius:999px;cursor:pointer;white-space:nowrap}
+.chip small{color:var(--muted);font-weight:500;margin-left:4px}
+.chip[aria-pressed="true"]{background:#1c1c1c;color:#fff}
+.chip[aria-pressed="true"] small{color:rgba(255,255,255,.6)}
+.chip.f[aria-pressed="true"]{background:var(--gold);color:#1c1c1c}
+.search{display:flex;align-items:center;gap:8px;background:var(--card);border-radius:12px;padding:0 12px;margin:8px 0;height:42px}
+.search svg{width:16px;height:16px;stroke:var(--muted);fill:none;stroke-width:2;flex:0 0 16px}
+.search input{border:0;outline:0;background:transparent;font:500 15px inherit;font-family:inherit;color:var(--ink);width:100%;height:100%}
+.count{font-size:12.5px;color:var(--muted);margin:6px 4px 0;display:flex;justify-content:space-between}
+.count button{border:0;background:none;font:600 12.5px inherit;font-family:inherit;color:var(--ink-2);cursor:pointer;padding:0}
 
-/* Controls */
-.controls{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.controls-inner{display:flex;gap:10px;align-items:center;padding:10px 0;overflow-x:auto;scrollbar-width:none}
-.controls-inner::-webkit-scrollbar{display:none}
-.chip{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);font:500 13px var(--sans);padding:7px 12px;border-radius:999px;cursor:pointer;text-decoration:none;white-space:nowrap}
-.chip:hover{border-color:var(--ink-3);color:var(--ink)}
-.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.sep{flex:0 0 1px;height:22px;background:var(--line)}
+.season{background:var(--card);border-radius:16px;margin-top:12px;overflow:hidden}
+.shead{display:flex;align-items:center;gap:10px;padding:13px 16px;border-bottom:1px solid var(--line)}
+.shead img{width:30px;height:30px;object-fit:contain}
+.shead b{font-size:17px;font-weight:800;display:block}
+.shead span{font-size:12px;color:var(--muted)}
+.rec{margin-left:auto;display:flex;gap:4px}
+.rec i{font-style:normal;font-size:11.5px;font-weight:700;padding:3px 7px;border-radius:6px;background:var(--soft);color:var(--ink-2);white-space:nowrap}
+.rec i.g{background:var(--gold-bg);color:var(--gold-ink)}
+.m{border-bottom:1px solid var(--line)}
+.m:last-child{border-bottom:0}
+.mr{display:grid;grid-template-columns:52px minmax(0,1fr) 24px;gap:10px;align-items:center;padding:11px 16px;list-style:none;cursor:pointer}
+.mr::-webkit-details-marker{display:none}
+.m.static .mr{cursor:default}
+details.m[open] .mr{background:var(--soft)}
+.m.goal .mr{background:#fffaf0}
+.md{font-size:12px;color:var(--muted);line-height:1.25}
+.md b{display:block;color:var(--ink);font-size:13px}
+.mt{min-width:0}
+.mt .tm{font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mt .tm .own{font-weight:700}
+.mt .tm .sc{font-weight:800;font-variant-numeric:tabular-nums;margin:0 4px}
+.mt .tg{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+.tg span{font-size:11px;font-weight:700;padding:1px 7px;border-radius:999px;background:var(--soft);color:var(--ink-2)}
+.tg .goal{background:var(--gold-bg);color:var(--gold-ink)}
+.tg .red{background:#fde8e8;color:#a6192e}
+.tg .cap{background:#1c1c1c;color:#fff}
+.tg .vid{background:transparent;color:var(--muted);font-weight:600;padding:1px 2px}
+.res{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff}
+.res.G{background:var(--win)} .res.B{background:var(--draw)} .res.M{background:var(--loss)}
+.res.v{width:auto;height:26px;padding:0 9px 0 8px;border-radius:999px;display:inline-flex;align-items:center;gap:5px;box-shadow:0 2px 6px rgba(0,0,0,.15);transition:transform .12s ease}
+.res.v svg{width:8px;height:8px;fill:#fff}
+.mr:active .res.v{transform:scale(.95)}
+.mr{grid-template-columns:52px minmax(0,1fr) auto}
+.mb{padding:4px 16px 14px 78px;background:var(--soft);display:grid;gap:10px;font-size:14px}
+.mb .role{color:var(--ink-2)} .mb .role b{color:var(--ink)}
+.mb p{margin:0;color:#333}
+.mb ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.mb li{display:flex;gap:8px;align-items:center}
+.mb .vl{font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.mb .vs{display:flex;flex-wrap:wrap;gap:6px}
+.mb .play{background:#fff}
+.empty{background:var(--card);border-radius:16px;padding:22px 16px;color:var(--muted);font-size:14px;text-align:center;margin-top:12px}
+@media (max-width:400px){.mb{padding-left:16px}.mr{grid-template-columns:46px minmax(0,1fr) auto}}
 
-/* Season tables */
-.season{margin:40px 0}
-.season-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-bottom:12px}
-.season-head .season-meta{margin-left:auto}
-.season-head h3{font-family:var(--serif);font-size:24px;font-weight:600;margin:0}
-.season-head .club{font-size:14px;font-weight:600;padding:3px 10px;border-radius:999px}
-.club.bk{color:var(--bk);background:var(--bk-soft)} .club.zb{color:var(--zb);background:var(--zb-soft)}
-.season-meta{font-size:14px;color:var(--ink-3)}
-.matches th:nth-child(1){width:96px} .matches th:nth-child(2){width:24%} .matches th:nth-child(3){width:20%} .matches th:nth-child(5){width:178px}
-.matches td{font-size:14.5px}
-.m-date{font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--ink-2)}
-.m-teams{font-weight:500;line-height:1.35}
-.m-teams .own{font-weight:700}
-.m-score{display:inline-block;font-variant-numeric:tabular-nums;font-weight:700;background:var(--surface-2);border:1px solid var(--line);border-radius:6px;padding:0 7px;margin:0 4px;font-size:13.5px}
-.m-comp{display:block;font-size:12px;color:var(--ink-3);margin-top:3px}
-tr.is-goal td{background:var(--goal-soft)}
-tr.is-goal td:first-child{box-shadow:inset 3px 0 0 var(--goal)}
-.badges{display:flex;flex-wrap:wrap;gap:5px}
-.b{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap;line-height:1.6}
-.b-goal{background:var(--goal);color:#fff}
-.b-assist{background:var(--assist);color:#fff}
-.b-red{background:var(--red-soft);color:var(--red);border:1px solid color-mix(in srgb,var(--red) 35%,transparent)}
-.b-cap{background:transparent;color:var(--cap);border:1px solid color-mix(in srgb,var(--cap) 45%,transparent)}
-.b-role{background:var(--surface-2);color:var(--ink-2);border:1px solid var(--line);font-weight:500}
-.m-note{color:var(--ink-2);margin:0 0 6px}
-.m-note:last-child{margin:0}
-.hl{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:4px}
-.hl a{display:inline-flex;gap:8px;align-items:baseline;text-decoration:none;color:var(--ink)}
-.hl a:hover .hl-t{text-decoration:underline}
-.ts{flex:0 0 auto;font:600 12px var(--sans);font-variant-numeric:tabular-nums;color:var(--bg);background:var(--ink-2);border-radius:4px;padding:1px 6px}
-.vid{display:block;text-decoration:none}
-.vid .thumb{position:relative;display:block;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:var(--line)}
-.vid img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}
-.vid:hover img{transform:scale(1.04)}
-.vid .play{font-size:11px;padding:3px 8px;left:6px;bottom:6px}
-.alts{font-size:12.5px;color:var(--ink-3);margin-top:6px}
-.alts a{color:var(--ink-2)}
-.none{font-size:13px;color:var(--ink-3)}
-.muted{color:var(--ink-3)}
-.empty-row td{color:var(--ink-3)}
+/* Sources */
+.src p,.src li{font-size:14px;color:#333;margin:0 0 8px}
+.src ul{margin:0;padding-left:18px}
+.src a{font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.src h3{margin:0 0 8px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
 
-@media (max-width:820px){
-  .matches thead{display:none}
-  .matches, .matches tbody, .matches tr, .matches td{display:block;width:100%}
-  .matches{border:0;background:transparent;box-shadow:none;border-radius:0}
-  .matches tr{background:var(--surface);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr}
-  .matches td{border:0;padding:6px 16px}
-  .matches td:first-child{padding-top:14px}
-  .matches td:last-child{padding-bottom:16px}
-  .matches td[data-l]:not(:first-child):not(.c-teams):not(.c-video)::before{content:attr(data-l);display:block;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);margin-bottom:2px}
-  tr.is-goal td{background:var(--goal-soft)}
-  tr.is-goal td:first-child{box-shadow:none}
-  tr.is-goal{border-left:3px solid var(--goal)!important}
-  .matches td.c-video{order:-1;padding:0}
-  .matches td.c-video .vid .thumb{border-radius:0}
-  .matches td.c-video .alts{padding:8px 16px 0}
-  .matches td.c-video .none{display:none}
-  .m-teams{font-size:16px}
-}
-
-/* Notes / sources */
-.notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.note{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow)}
-.note h4{margin:0 0 8px;font-size:15px}
-.note p,.note li{font-size:14.5px;color:var(--ink-2);margin:0 0 8px}
-.note ul{margin:0;padding-left:18px}
-@media (max-width:760px){.notes{grid-template-columns:1fr}}
-footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--ink-3);font-size:13px}
-.legend{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:13px;color:var(--ink-2);margin:0 0 4px}
-:focus-visible{outline:2px solid var(--zb);outline-offset:2px}
+/* Tab bar */
+.tabbar{position:fixed;left:0;right:0;bottom:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+.tabbar nav{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr)}
+.tabbar a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:9px 0 10px;font-size:11.5px;font-weight:600;color:var(--muted)}
+.tabbar a .i{font-size:20px;line-height:1;filter:grayscale(1);opacity:.55}
+.tabbar a[aria-current="page"]{color:var(--bk)}
+.tabbar a[aria-current="page"] .i{filter:none;opacity:1}
+footer{text-align:center;color:var(--muted);font-size:12px;margin:22px 8px 0}
+:focus-visible{outline:2px solid var(--bk);outline-offset:2px;border-radius:8px}
 </style>
 </head>
 <body>
+<main>
 
-<header class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="eyebrow">Futbolcu arşivi · 1990-1995</p>
-      <h1>Ahmet Kanca</h1>
-      <p class="lede">Bakırköyspor ve Zeytinburnuspor formalarıyla 1. Lig'de oynanan resmi maçların, atılan gollerin ve bugüne ulaşmış video kayıtlarının derlendiği arşiv sayfası. Dönemin spiker anlatımlarında "Büyük Ahmet" olarak anılmaktadır.</p>
-      <dl class="facts">
-        <div><dt>Doğum</dt><dd>16 Mayıs 1963, Sürmene (Trabzon)</dd></div>
-        <div><dt>Mevki</dt><dd>Orta saha</dd></div>
-        <div><dt>Kulüpler</dt><dd>Bakırköyspor (1989-1993)<br>Zeytinburnuspor (1993-1996)</dd></div>
-        <div><dt>Görev</dt><dd>Zeytinburnuspor kaptanı (1994-95)</dd></div>
-      </dl>
+  <!-- ÖZET -->
+  <div class="view" id="v-ozet">
+    <div class="hero">
+      <div class="k">⚽ Maç arşivi · 1990-1995</div>
+      <div class="name">Ahmet Kanca</div>
+      <div class="meta">Orta saha · 16 Mayıs 1963, Sürmene</div>
+      <div class="tz" id="tz"></div>
+      <div class="strip"><span class="cl">Spikerlerin deyişiyle</span><b>"Büyük Ahmet"</b></div>
+      <div class="strip"><span class="cl">Kaptanlık</span><b>Zeytinburnuspor · 94-95</b></div>
+      <button class="go" data-goto="maclar">Tüm maçlar →</button>
     </div>
-    <div>
-      <div class="mosaic" id="mosaic"></div>
-      <p class="mosaic-cap">Görseller ilgili maç videolarının YouTube kapak karelerinden alınmıştır. Görsele tıklandığında video yeni sekmede açılır.</p>
+    <div class="stats" id="clubs"></div>
+
+    <div class="label">Goller <small>TFF kaydı · 11 gol</small></div>
+    <div class="form"><div class="t">Gol attığı maçlar <span>· videosu olanlara dokun</span></div><div class="tiles" id="tiles"></div></div>
+
+    <div class="label">Öne çıkan anlar <small>videoyu o saniyeden açar</small></div>
+    <div id="moments"></div>
+    <footer>Kamuya açık kaynaklardan derlenmiştir. Videoların hakları ilgili yayıncılara aittir.</footer>
+  </div>
+
+  <!-- MAÇLAR -->
+  <div class="view" id="v-maclar" hidden>
+    <h1>Maçlar</h1>
+    <p class="sub">TFF kayıtlarındaki 117 resmi maç · ayrıntı için dokun</p>
+    <div class="controls">
+      <div class="chips" id="seasons"></div>
+      <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Rakip takım ara" aria-label="Rakip takım ara" autocomplete="off"></label>
+      <div class="chips">
+        <button class="chip f" id="fHome" aria-pressed="false">🏠 İç saha</button>
+        <button class="chip f" id="fAway" aria-pressed="false">✈️ Deplasman</button>
+        <button class="chip f" id="fGoal" aria-pressed="false">⚽ Gol ve asist</button>
+        <button class="chip f" id="fVid" aria-pressed="false">▶ Videolu</button>
+        <button class="chip" id="fSort" aria-pressed="false">↓ Eskiden yeniye</button>
+      </div>
+      <div class="count"><span id="count"></span><button id="expand">Tümünü aç</button></div>
+    </div>
+    <div id="list"></div>
+  </div>
+
+  <!-- KAYNAKLAR -->
+  <div class="view" id="v-kaynaklar" hidden>
+    <h1>Kaynaklar</h1>
+    <p class="sub">Bilgilerin nereden geldiği</p>
+    <div class="label">Kaynaklar</div>
+    <div class="card src"><ul>
+      <li><a href="https://www.tff.org/Default.aspx?pageId=30&kisiId=497749" target="_blank" rel="noopener">TFF Futbol Bilgi Bankası</a>: maç listesi, goller, kartlar ve lisans hareketleri.</li>
+      <li><a href="https://www.mackolik.com/futbolcu/a-kanca/6pm1f50nuvb0abbajp3a9jre2" target="_blank" rel="noopener">Mackolik</a>: sezonluk istatistikler.</li>
+      <li><a href="https://tr.wikipedia.org/wiki/Ahmet_Kanca" target="_blank" rel="noopener">Vikipedi</a>: kariyer özeti ve kulüp logoları.</li>
+      <li><a href="https://ayaktakileroturanlar.com/kadrolar/bakirkoyspor-1989-1990-sezonu-kadrosu" target="_blank" rel="noopener">Bakırköyspor 1989-90 kadro fotoğrafı</a>: 1. Lig'e yükselme sezonu.</li>
+      <li>Videolar: TRT Spor Arşiv, Futbolkolik, Maç Anıları, Türk Futbol Tarihi ve diğer YouTube kanalları.</li>
+    </ul></div>
+    <div class="label">Yöntem</div>
+    <div class="card src">
+      <p>Videolar maç tarihi, takımlar ve skor üzerinden eşleştirilmiştir. Zaman damgaları otomatik altyazı dökümlerinden alınmıştır, birkaç saniyelik sapma olabilir.</p>
+      <p>Bakırköyspor kadrosunda iki Ahmet olduğundan spikerler Ahmet Kanca'ya "Büyük Ahmet", diğerine "Küçük Ahmet" demiştir. Yalnızca açıkça Ahmet Kanca'yı işaret eden anlar listelenmiştir.</p>
+      <p>TFF kayıtlarında 11 gol bulunur, Mackolik 14 gol gösterir. 1989-90 sezonu (2. Lig) TFF kayıtlarında olmadığı için listede yer almaz.</p>
     </div>
   </div>
-</header>
-
-<main class="wrap">
-
-  <div class="stats" id="stats"></div>
-
-  <section id="ozet">
-    <h2>Sezonlara göre kariyer özeti</h2>
-    <p class="sec-intro">Maç ve gol sayıları Türkiye Futbol Federasyonu (TFF) Futbol Bilgi Bankası kayıtlarına dayanmaktadır. Video sütunu, YouTube üzerinde en az bir kaydı tespit edilen maç sayısını gösterir.</p>
-    <table class="tbl summary" id="summary">
-      <thead><tr><th>Sezon</th><th>Kulüp</th><th class="num">Maç</th><th class="num">Gol</th><th class="num">Videolu maç</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </section>
-
-  <section id="one-cikanlar">
-    <h2>Öne çıkan anlar</h2>
-    <p class="sec-intro">Spiker anlatımında gol, asist ya da önemli bir pozisyonla anıldığı maçlar. Bağlantılar videoyu ilgili saniyeden başlatır.</p>
-    <div class="gallery" id="gallery"></div>
-  </section>
-
 </main>
 
-<nav class="controls" aria-label="Maç listesi filtreleri">
-  <div class="wrap controls-inner" id="controls">
-    <button class="chip" data-filter="all" aria-pressed="true">Tüm maçlar</button>
-    <button class="chip" data-filter="video" aria-pressed="false">Videolu maçlar</button>
-    <button class="chip" data-filter="goal" aria-pressed="false">Gol ve asist</button>
-    <button class="chip" data-filter="hl" aria-pressed="false">Anlatımda anılan</button>
-    <span class="sep" aria-hidden="true"></span>
-  </div>
-</nav>
+<div class="tabbar"><nav aria-label="Bölümler">
+  <a href="#ozet" data-v="ozet"><span class="i">⚽</span>Özet</a>
+  <a href="#maclar" data-v="maclar"><span class="i">📋</span>Maçlar</a>
+  <a href="#kaynaklar" data-v="kaynaklar"><span class="i">📚</span>Kaynaklar</a>
+</nav></div>
 
-<main class="wrap" id="maclar">
-  <section style="margin-top:28px">
-    <h2>Maç maç arşiv</h2>
-    <p class="sec-intro">Tüm resmi maçlar kronolojik sırayla listelenmiştir. Gol atılan maçlar renkli olarak işaretlenmiştir. Oyuncunun maçtaki rolü (ilk 11, oyuna giriş ya da çıkış dakikası) yalnızca kadro bilgisi yayımlanmış kayıtlar için verilmiştir.</p>
-    <div class="legend">
-      <span class="b b-goal">⚽ Gol</span>
-      <span class="b b-assist">Asist</span>
-      <span class="b b-red">Kırmızı kart</span>
-      <span class="b b-cap">Kaptan</span>
-      <span class="b b-role">Kadro bilgisi</span>
-    </div>
-    <div id="seasons"></div>
-  </section>
-
-  <section id="kaynaklar">
-    <h2>Kaynaklar ve yöntem</h2>
-    <div class="notes">
-      <div class="note">
-        <h4>Kaynaklar</h4>
-        <ul>
-          <li><a href="https://www.tff.org/Default.aspx?pageId=30&kisiId=497749" target="_blank" rel="noopener">TFF Futbol Bilgi Bankası, oyuncu kaydı</a>: maç listesi, goller, kartlar ve lisans hareketleri.</li>
-          <li><a href="https://www.mackolik.com/futbolcu/a-kanca/6pm1f50nuvb0abbajp3a9jre2" target="_blank" rel="noopener">Mackolik oyuncu profili</a>: sezonluk istatistikler.</li>
-          <li><a href="https://tr.wikipedia.org/wiki/Ahmet_Kanca" target="_blank" rel="noopener">Vikipedi maddesi</a>: kariyer özeti.</li>
-          <li><a href="https://ayaktakileroturanlar.com/kadrolar/bakirkoyspor-1989-1990-sezonu-kadrosu" target="_blank" rel="noopener">Bakırköyspor 1989-90 kadro fotoğrafı</a>: 1. Lig'e yükselme sezonu.</li>
-          <li>Video kayıtları: TRT Spor Arşiv, Futbolkolik, Maç Anıları, Türk Futbol Tarihi ve diğer YouTube kanalları.</li>
-        </ul>
-      </div>
-      <div class="note">
-        <h4>Yöntem ve notlar</h4>
-        <p>Videolar maç tarihi, takımlar ve skor üzerinden eşleştirilmiştir. Zaman damgaları, videoların otomatik altyazı dökümlerinde oyuncunun adının geçtiği anlardan alınmıştır ve birkaç saniyelik sapma gösterebilir.</p>
-        <p>Bakırköyspor kadrosunda iki Ahmet bulunduğundan, spikerler Ahmet Kanca için "Büyük Ahmet", diğer oyuncu için "Küçük Ahmet" ifadesini kullanmıştır. Yalnızca "Büyük Ahmet" ya da açıkça Ahmet Kanca'yı işaret eden anlar listelenmiştir.</p>
-        <p>TFF kayıtlarında 11 gol yer almaktadır; Mackolik bu sayıyı 14 olarak vermektedir. 1989-90 sezonu (2. Lig) TFF kayıtlarında bulunmadığından listeye dahil edilmemiştir. Kısa video kliplerinde oyuncunun görüntüde yer almaması mümkündür.</p>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap">Bu sayfa kamuya açık kaynaklardan derlenmiştir. Video içeriklerinin hakları ilgili yayıncılara aittir. Son güncelleme: Kasım 2026.</div>
-</footer>
-
+<script src="data.js"></script>
 <script>
-/* c: kulüp (bk|zb), comp: yarışma, role: kadro bilgisi, goal/assist/red: dakika, note: maç notu,
-   v: [videoId, etiket], hl: [videoId, saniye, açıklama] */
-const M = [
-// 1990-91 Bakırköyspor
-{d:"1990-08-26",h:"Bakırköyspor",a:"Ankaragücü",s:"7-1"},
-{d:"1990-09-02",h:"Sarıyer",a:"Bakırköyspor",s:"2-2"},
-{d:"1990-09-09",h:"Bakırköyspor",a:"Trabzonspor",s:"1-4"},
-{d:"1990-09-16",h:"Karşıyaka",a:"Bakırköyspor",s:"2-1"},
-{d:"1990-09-22",h:"Bakırköyspor",a:"Bursaspor",s:"1-2",note:"TFF kaydında skor 1-2 olarak geçmektedir; video başlığında 4-1 yazmaktadır.",v:[["DrdY08j-8Ss","BUKO 3888"]]},
-{d:"1990-10-07",h:"Adanaspor",a:"Bakırköyspor",s:"1-1",note:"Bir penaltı pozisyonu maçın önüne geçmiştir.",v:[["X9RBNn6MjfQ","Türk Futbol Tarihi"]]},
-{d:"1990-10-20",h:"Bakırköyspor",a:"Gençlerbirliği",s:"2-1"},
-{d:"1990-10-27",h:"Galatasaray",a:"Bakırköyspor",s:"2-1",note:"Galatasaray'ın galibiyet golü Uğur Tütüneker'den.",v:[["LPfUHWqmSzE","Maç Anıları"],["IVrMyQCNyz4","Yiğit Alp"],["H08rKrqxT98","Türk Futbol Tarihi"]]},
-{d:"1990-11-03",h:"Bakırköyspor",a:"Fenerbahçe",s:"2-2",v:[["o3yBBPs_K74","Maç Anıları"],["WxGCcHGIf0Y","Peen"]]},
-{d:"1990-11-18",h:"Gaziantepspor",a:"Bakırköyspor",s:"0-1"},
-{d:"1990-11-25",h:"Bakırköyspor",a:"Aydınspor",s:"3-1",role:"Kadroda",note:"TRT kadro bilgisinde \"b.ahmet (kanca)\" olarak yer almaktadır.",v:[["TU03uoTF4q4","TRT Spor Arşiv"]]},
-{d:"1990-12-02",h:"Boluspor",a:"Bakırköyspor",s:"2-0",v:[["G1yJh6_sa3g","TRT Spor Arşiv"]]},
-{d:"1990-12-09",h:"Bakırköyspor",a:"Zeytinburnuspor",s:"0-0",note:"Sonraki yıllarda formasını giyeceği Zeytinburnuspor'a karşı."},
-{d:"1990-12-15",h:"Konyaspor",a:"Bakırköyspor",s:"1-0"},
-{d:"1991-02-10",h:"Trabzonspor",a:"Bakırköyspor",s:"4-1"},
-{d:"1991-02-20",h:"Bakırköyspor",a:"Sarıyer",s:"2-0"},
-{d:"1991-02-24",h:"Bursaspor",a:"Bakırköyspor",s:"1-4",note:"11 dakikalık geniş özet. Bakırköyspor deplasmanda farklı kazanmıştır.",v:[["3MbBFpBLdU4","Geniş özet"]],hl:[["3MbBFpBLdU4",46,"Hücumda topla buluşuyor"],["3MbBFpBLdU4",105,"Kadro anlatımında anılıyor"],["3MbBFpBLdU4",424,"Kanatta topla ilerliyor"],["3MbBFpBLdU4",447,"83. dakika, kaleci Mehmet ile karşı karşıya"]]},
-{d:"1991-03-03",h:"Bakırköyspor",a:"Beşiktaş",s:"2-4",note:"Yaklaşık 10 dakikalık geniş özet.",v:[["7TsEYrYApuU","Maç Anıları"],["wc7kH1zeSWY","Geniş özet"]],hl:[["7TsEYrYApuU",230,"Hücum organizasyonunda"],["7TsEYrYApuU",384,"Pas trafiğinde"],["7TsEYrYApuU",466,"Ceza sahasında top mücadelesi"]]},
-{d:"1991-03-17",h:"Gençlerbirliği",a:"Bakırköyspor",s:"1-1"},
-{d:"1991-03-24",h:"Bakırköyspor",a:"Galatasaray",s:"0-2",role:"Sonradan girdi",note:"16 dakikalık geniş özet. Tevfik'in yerine oyuna girmiştir.",v:[["tOHRLyH42r0","Geniş özet"],["v834v-ckJOc","Maç Anıları"],["opDL6EEcXv4","Türk Futbol Tarihi"]],hl:[["tOHRLyH42r0",617,"Oyuna giriş anı"],["tOHRLyH42r0",821,"Orta sahada top mücadelesi"]]},
-{d:"1991-03-31",h:"Fenerbahçe",a:"Bakırköyspor",s:"1-0",v:[["En2BW3xPEIE","Maç Anıları"]]},
-{d:"1991-04-07",h:"Bakırköyspor",a:"Gaziantepspor",s:"7-2",note:"Sezonun en farklı galibiyetlerinden biri.",v:[["xRX8Gjqf9JI","Türk Futbol Tarihi"],["dTXiGeUKNHA","Peen"]]},
-{d:"1991-05-05",h:"Bakırköyspor",a:"Boluspor",s:"3-1",v:[["R6EkhyxbWeI","Maç Anıları"]]},
-{d:"1991-05-12",h:"Zeytinburnuspor",a:"Bakırköyspor",s:"1-3"},
-{d:"1991-05-19",h:"Bakırköyspor",a:"Konyaspor",s:"2-0"},
-// 1991-92
-{d:"1991-09-01",h:"Ankaragücü",a:"Bakırköyspor",s:"2-0",v:[["O_A0nHFGDtA","Türk Futbol Tarihi"]]},
-{d:"1991-09-15",h:"Fenerbahçe",a:"Bakırköyspor",s:"4-2",role:"İlk 11",goal:"73'",assist:"45'",note:"Goller: Tanju Çolak 23', Hasan Vezir 45', Aykut Kocaman 62' ve 72', Ahmet Kanca 73', Ümit Birol 76'. Hasan Vezir'in golünde asist yapmıştır. TFF golü ayakla kaydetmiştir; spiker anlatımında kafa vuruşu olarak geçmektedir.",v:[["6Qo5cxfP-Cg","TRT Spor Arşiv"]],hl:[["6Qo5cxfP-Cg",62,"45. dakika, Hasan Vezir'in golüne asist"],["6Qo5cxfP-Cg",160,"73. dakika, Novak'ın kornerinden gol (3-2)"]]},
-{d:"1991-09-21",h:"Bakırköyspor",a:"Adana Demirspor",s:"1-1",role:"İlk 11, 60' çıktı",note:"Yerine Ahmet Kilimcioğlu (Küçük Ahmet) oyuna girmiştir.",v:[["jlgUo07siDE","TRT Spor Arşiv"]]},
-{d:"1991-09-29",h:"Trabzonspor",a:"Bakırköyspor",s:"2-1",role:"70' girdi",note:"Goller: Hami Mandıralı 26' (penaltı) ve 48', Zafer Tüzün 69' (penaltı). Maç Avni Aker Stadı'nda oynanmıştır.",v:[["7rnCkrSJ99g","TRT Spor Arşiv"],["M6lSNaE1VEE","Alternatif kayıt"]]},
-{d:"1991-10-06",h:"Bakırköyspor",a:"Boluspor",s:"2-0",v:[["IkzE6kGyf0E","Türk Futbol Tarihi"]]},
-{d:"1991-10-19",h:"Beşiktaş",a:"Bakırköyspor",s:"4-2",role:"İlk 11, 66' çıktı",note:"Maçın yıldızı Mehmet Özdilek (Şifo Mehmet).",v:[["PL_SQ9VltQQ","TRT Spor Arşiv"]]},
-{d:"1991-11-03",h:"Gençlerbirliği",a:"Bakırköyspor",s:"2-4",role:"İlk 11, 64' çıktı",note:"Bakırköyspor'un yıldızı Jarosław Araszkiewicz.",v:[["qYgZkiZVReM","TRT Spor Arşiv"]]},
-{d:"1991-11-24",h:"Samsunspor",a:"Bakırköyspor",s:"0-1",note:"Galibiyet golü Piotr Nowak'tan.",v:[["LDqTH4mLFH0","Türk Futbol Tarihi"],["JuGoA8F52tE","Türk Futbol Tarihi"]]},
-{d:"1991-12-01",h:"Bakırköyspor",a:"Gaziantepspor",s:"2-2"},
-{d:"1991-12-08",h:"Aydınspor",a:"Bakırköyspor",s:"1-0",red:"29'",note:"29. dakikada kırmızı kart görmüş, Bakırköyspor ilk yarının büyük bölümünü 10 kişi oynamıştır.",v:[["oc2zdwOjm4c","Türk Futbol Tarihi"]],hl:[["oc2zdwOjm4c",0,"Kırmızı kart pozisyonu"]]},
-{d:"1991-12-18",h:"Bulancakspor",a:"Bakırköyspor",s:"1-2",comp:"Türkiye Kupası"},
-{d:"1991-12-21",h:"Galatasaray",a:"Bakırköyspor",s:"2-1",note:"Galatasaray'ın golleri Uğur Tütüneker'den.",v:[["sF21pNRccQ4","Türk Futbol Tarihi"],["uZqkcfa_nts","Alternatif kayıt"],["LwPg_8lkU5k","Peen"]]},
-{d:"1992-02-02",h:"Bakırköyspor",a:"Galatasaray",s:"5-6",comp:"Türkiye Kupası",note:"TFF kaydına göre kupa maçı."},
-{d:"1992-02-09",h:"Bakırköyspor",a:"Ankaragücü",s:"4-1",note:"Araszkiewicz'in vole golü.",v:[["ctVp_OqC5Xc","Türk Futbol Tarihi"]]},
-{d:"1992-02-16",h:"Konyaspor",a:"Bakırköyspor",s:"0-0",v:[["-ORuYKpF0rQ","Türk Futbol Tarihi"]]},
-{d:"1992-02-24",h:"Bakırköyspor",a:"Fenerbahçe",s:"0-1",v:[["OqhCL-tyUbc","Maç Anıları"],["aYYSH95vDU4","Maç Anıları"],["PMqmUfbMCz0","Türk Futbol Tarihi"]]},
-{d:"1992-03-01",h:"Adana Demirspor",a:"Bakırköyspor",s:"2-3",v:[["zbsrkCcgHMM","Türk Futbol Tarihi"]]},
-{d:"1992-03-07",h:"Bakırköyspor",a:"Trabzonspor",s:"1-2",role:"İlk 11, 54' çıktı",note:"Bakırköyspor 47. dakikada Zafer Tüzün ile öne geçmiş; Trabzonspor 88' Hamdi Aslan ve 90' Hami Mandıralı ile kazanmıştır.",v:[["iz2btipOeWo","TRT Spor Arşiv"]]},
-{d:"1992-03-15",h:"Boluspor",a:"Bakırköyspor",s:"4-0",v:[["i-FO0MO7WB8","Türk Futbol Tarihi"]]},
-{d:"1992-03-21",h:"Bakırköyspor",a:"Beşiktaş",s:"0-0",v:[["mMJUrIz53fo","Türk Futbol Tarihi"]]},
-{d:"1992-03-28",h:"Sarıyer",a:"Bakırköyspor",s:"1-0",note:"Sarıyer'in golüne yoğun itiraz yapılmıştır.",v:[["fB3x2qVGJrM","Türk Futbol Tarihi"]]},
-{d:"1992-04-04",h:"Bakırköyspor",a:"Gençlerbirliği",s:"4-1",role:"İlk 11, 46' çıktı",note:"Zafer Tüzün hat-trick yapmıştır.",v:[["pX1QdyO_oYs","TRT Spor Arşiv"],["r11apyhjDOw","Peen"]]},
-{d:"1992-04-12",h:"Altay",a:"Bakırköyspor",s:"1-0",red:"49'",note:"TFF kaydına göre 49. dakikada kırmızı kart.",v:[["WQRFjbLejYI","Özet"]]},
-{d:"1992-04-26",h:"Gaziantepspor",a:"Bakırköyspor",s:"1-1",goal:"78'",note:"Bakırköyspor'un golü Novak'ın pasıyla 78. dakikada gelmiştir.",v:[["xNCnP03XuAw","Türk Futbol Tarihi"]],hl:[["xNCnP03XuAw",95,"78. dakika, gol"]]},
-{d:"1992-05-03",h:"Bakırköyspor",a:"Aydınspor",s:"2-0",v:[["xYsDsyG4_Cg","TRT Spor Arşiv"]]},
-{d:"1992-05-10",h:"Bursaspor",a:"Bakırköyspor",s:"2-2",note:"Sezonun en erken golünün atıldığı maç.",v:[["BSbu-jpWA_4","Türk Futbol Tarihi"]]},
-// 1992-93
-{d:"1992-09-06",h:"Beşiktaş",a:"Bakırköyspor",s:"1-0",note:"Beşiktaş'ın golü Hamit Yüksel'in kafa vuruşuyla.",v:[["s4ZQdAHTbYc","Maç Anıları"],["aVYmchlIFtI","Alternatif kayıt"],["-O3iaFbK3ug","Türk Futbol Tarihi"]]},
-{d:"1992-09-13",h:"Bakırköyspor",a:"Gençlerbirliği",s:"3-2",v:[["xFM3spDVbg4","Türk Futbol Tarihi"]]},
-{d:"1992-10-11",h:"Bakırköyspor",a:"Galatasaray",s:"0-1",v:[["O1-KQsNen_Q","Sarı Kırmızı Arşiv"],["h2uTDr3zPTc","Türk Futbol Tarihi"]]},
-{d:"1992-10-18",h:"Gaziantepspor",a:"Bakırköyspor",s:"1-5",goal:"65'",note:"Duvar pasıyla ceza sahasına girerek Bakırköyspor'un üçüncü golünü atmıştır. Rakip taraftar da takımı alkışlamıştır.",v:[["pHhe2m1odKU","Türk Futbol Tarihi"]],hl:[["pHhe2m1odKU",148,"65. dakika, gol"]]},
-{d:"1992-11-01",h:"Bakırköyspor",a:"Sarıyer",s:"3-1"},
-{d:"1992-11-08",h:"Konyaspor",a:"Bakırköyspor",s:"1-3",goal:"65'"},
-{d:"1992-11-14",h:"Bakırköyspor",a:"Ankaragücü",s:"1-2"},
-{d:"1992-11-22",h:"Altay",a:"Bakırköyspor",s:"2-2"},
-{d:"1992-12-20",h:"Bakırköyspor",a:"Bursaspor",s:"2-1"},
-{d:"1993-01-23",h:"Bakırköyspor",a:"Fenerbahçe",s:"1-3",note:"17 dakikalık geniş özet. Maç Fenerbahçe Stadı'nda oynanmıştır.",v:[["-irb775m_TQ","Futbolkolik"],["5TLQSsXC5dU","Türk Futbol Tarihi"]],hl:[["-irb775m_TQ",157,"Hücumda, Zafer ile kombinasyon"],["-irb775m_TQ",582,"Sağ kanatta"],["-irb775m_TQ",789,"Kemal Yıldırım ile atak"]]},
-{d:"1993-01-31",h:"Kocaelispor",a:"Bakırköyspor",s:"1-0"},
-{d:"1993-02-07",h:"Bakırköyspor",a:"Beşiktaş",s:"3-6",role:"İlk 11",goal:"44'",note:"9 gollü maç. İlk yarının son dakikalarında Zafer Tüzün'ün ortasından skoru 2-1'e getirmiştir.",v:[["ZKhJh6sq8wU","TRT Spor Arşiv"],["6ny8CwFp7T0","Maç Anıları"],["5ubHWYXhj6g","Alternatif kayıt"]],hl:[["ZKhJh6sq8wU",32,"44. dakika, gol"],["6ny8CwFp7T0",142,"Golün farklı kaydı"]]},
-{d:"1993-02-14",h:"Gençlerbirliği",a:"Bakırköyspor",s:"1-0",v:[["5EGZy4TUBcA","TRT Spor Arşiv"]]},
-{d:"1993-02-21",h:"Bakırköyspor",a:"Karşıyaka",s:"1-2",v:[["6nqeVpYv77I","TRT Spor Arşiv"]],hl:[["6nqeVpYv77I",18,"Rotariu'nun pasıyla şut, yandan dışarı"]]},
-{d:"1993-02-28",h:"Kayserispor",a:"Bakırköyspor",s:"1-0",v:[["YJVY6nRQZTE","TRT Spor Arşiv"]]},
-{d:"1993-03-13",h:"Galatasaray",a:"Bakırköyspor",s:"3-0",note:"14 dakikalık geniş özet. Kaleci Hayrettin karşısında net bir gol fırsatı kaçmıştır.",v:[["FX78xj-j7b4","Futbolkolik"],["OZl846M-yDM","Alternatif kayıt"],["hV09F-wv0dE","Sarı Kırmızı Arşiv"]],hl:[["FX78xj-j7b4",228,"Duvar pası, Rotariu'nun şutu"],["FX78xj-j7b4",285,"Şut, savunmadan dönüyor"],["FX78xj-j7b4",342,"Kaleciyle karşı karşıya, mutlak gol pozisyonu"],["FX78xj-j7b4",720,"Orta saha mücadelesi"]]},
-{d:"1993-03-21",h:"Bakırköyspor",a:"Gaziantepspor",s:"0-0",note:"Pozisyonu bol, golsüz bir maç.",v:[["4meYW6DT7Y0","TRT Spor Arşiv"]],hl:[["4meYW6DT7Y0",120,"Rotariu ile atak"]]},
-{d:"1993-04-04",h:"Sarıyer",a:"Bakırköyspor",s:"0-1",v:[["FzFnKLyIW3w","TRT Spor Arşiv"]]},
-{d:"1993-04-11",h:"Bakırköyspor",a:"Konyaspor",s:"5-0"},
-{d:"1993-05-02",h:"Ankaragücü",a:"Bakırköyspor",s:"1-0"},
-{d:"1993-05-09",h:"Bakırköyspor",a:"Altay",s:"1-0"},
-{d:"1993-05-16",h:"Aydınspor",a:"Bakırköyspor",s:"0-0"},
-{d:"1993-05-23",h:"Bakırköyspor",a:"Trabzonspor",s:"0-3"},
-{d:"1993-05-30",h:"Bursaspor",a:"Bakırköyspor",s:"3-0",note:"Bakırköyspor formasıyla son resmi maç.",v:[["HXLJKBu6hTw","TRT Spor Arşiv"]]},
-// 1993-94 Zeytinburnuspor
-{d:"1993-08-28",h:"Galatasaray",a:"Zeytinburnuspor",s:"3-0",note:"Zeytinburnuspor formasıyla ilk lig maçı. Ali Sami Yen Stadı'nda oynanan ilk gece maçıdır; hakem Serdar Çakır. Spiker, oyuncuyu \"Bakırköy'den bu mevsim Zeytinburnuspor'a gelen\" sözleriyle tanıtmaktadır.",v:[["CASijyNrlbE","Futbolkolik"],["pqhp8Jy6l7s","Sarı Kırmızı Arşiv"],["ihMUS_32k6I","Alternatif kayıt"]],hl:[["CASijyNrlbE",265,"Ceza sahasında şut, kaleci Hayrettin kurtarıyor"],["CASijyNrlbE",275,"Yakın çekim ve tanıtım"],["CASijyNrlbE",402,"Serbest vuruş sonrası topla buluşuyor"]]},
-{d:"1993-09-05",h:"Zeytinburnuspor",a:"Trabzonspor",s:"0-0",role:"İlk 11, 87' çıktı",note:"Maçın sonlarına doğru iki kez kaleci Victor Grichko ile karşı karşıya kalmış, iki vuruşu da kaleciden dönmüştür. Zeytinburnuspor teknik direktörü, ikinci yarıdaki oyuna göre üç puanın Zeytinburnuspor'un hakkı olduğunu belirtmiştir.",v:[["qh_3EgxsQS0","TRT Spor Arşiv"]],hl:[["qh_3EgxsQS0",40,"Kaleci Victor ile karşı karşıya"],["qh_3EgxsQS0",54,"İkinci kez karşı karşıya, top kornere"]]},
-{d:"1993-09-19",h:"Zeytinburnuspor",a:"Gaziantepspor",s:"3-1"},
-{d:"1993-09-26",h:"Beşiktaş",a:"Zeytinburnuspor",s:"2-2",v:[["ibJjxtMxA64","Futbolkolik"],["4v4hM7A9s1w","Maç Anıları"],["5k8XiNPPMKQ","Beşiktaş Nostalji"]]},
-{d:"1993-10-03",h:"Zeytinburnuspor",a:"Altay",s:"1-1",v:[["2Noq4xG8g2s","Nostalji Futbol"],["ucU6AWbY8NA","Alternatif kayıt"]]},
-{d:"1993-10-10",h:"Gençlerbirliği",a:"Zeytinburnuspor",s:"3-0"},
-{d:"1993-10-31",h:"Sarıyer",a:"Zeytinburnuspor",s:"1-0"},
-{d:"1993-11-14",h:"Zeytinburnuspor",a:"Bursaspor",s:"1-0",goal:"60'",note:"Maçın tek golü."},
-{d:"1993-11-21",h:"Zeytinburnuspor",a:"Fenerbahçe",s:"0-2",v:[["euqDSfkNGeg","Maç Anıları"],["67OXHAklvac","Türk Futbol Tarihi"]]},
-{d:"1993-11-28",h:"Samsunspor",a:"Zeytinburnuspor",s:"2-0"},
-{d:"1993-12-08",h:"Zeytinburnuspor",a:"Bursaspor",s:"0-2"},
-{d:"1993-12-12",h:"Ankaragücü",a:"Zeytinburnuspor",s:"0-3",goal:"59'",note:"Kemal Yıldırım'ın pasıyla takımın üçüncü golünü atmıştır. Maçın yıldızı Adnan Baytar.",v:[["v5-riQU_NbU","TRT Spor Arşiv"],["GOOsCNn4KpI","TRT Spor Arşiv"]],hl:[["v5-riQU_NbU",104,"59. dakika, gol"],["v5-riQU_NbU",119,"Golün tekrarı"]]},
-{d:"1993-12-19",h:"Zeytinburnuspor",a:"Karabükspor",s:"3-0",goal:"49'"},
-{d:"1994-02-20",h:"Zeytinburnuspor",a:"Kocaelispor",s:"2-1"},
-{d:"1994-02-27",h:"Gaziantepspor",a:"Zeytinburnuspor",s:"1-0"},
-{d:"1994-03-06",h:"Zeytinburnuspor",a:"Beşiktaş",s:"2-3",v:[["oOPHD7g1FB4","Maç Anıları"],["xkWP76pu8EA","Beşiktaş Nostalji Arşivi"]]},
-{d:"1994-03-13",h:"Altay",a:"Zeytinburnuspor",s:"1-0"},
-{d:"1994-03-20",h:"Zeytinburnuspor",a:"Gençlerbirliği",s:"3-3"},
-{d:"1994-03-26",h:"Kayserispor",a:"Zeytinburnuspor",s:"4-1",goal:"70'",note:"TFF kaydında rakip Kayseri Erciyesspor olarak geçmektedir. Zeytinburnuspor'un tek golü."},
-{d:"1994-04-03",h:"Zeytinburnuspor",a:"Sarıyer",s:"1-1",goal:"6'",note:"Zeytinburnuspor'un golü.",v:[["XartKEPT1cY","Özet"]]},
-{d:"1994-04-17",h:"Fenerbahçe",a:"Zeytinburnuspor",s:"4-0",v:[["CmlzpnvXSj8","Futbolkolik"],["Y9CigtENvXM","Maç Anıları"],["8K-_30dHGuQ","Maç Anıları"]]},
-{d:"1994-04-24",h:"Zeytinburnuspor",a:"Samsunspor",s:"0-2"},
-{d:"1994-05-08",h:"Zeytinburnuspor",a:"Ankaragücü",s:"3-1"},
-{d:"1994-05-15",h:"Karabükspor",a:"Zeytinburnuspor",s:"1-2",note:"11 dakikalık kayıt, Karabük taraftar derneği arşivinden.",v:[["REFwTwZqmAY","Kırmızı Mavi Karabük"]]},
-// 1994-95
-{d:"1994-08-13",h:"Zeytinburnuspor",a:"Fenerbahçe",s:"1-4",role:"İlk 11 (8 numara)",note:"Sezon açılış maçı. 15 dakikalık geniş özette birçok pozisyonda anılmaktadır.",v:[["e2cc7_favVs","Futbolkolik"],["CwQwBSD73vE","Türk Futbol Tarihi"],["Q8bIU91Weqo","Maç Anıları"]],hl:[["e2cc7_favVs",43,"Kadro tanıtımı, 8 numara"],["e2cc7_favVs",191,"Hücumda"],["e2cc7_favVs",211,"Ara pası"],["e2cc7_favVs",605,"Kaçan gol fırsatı"]]},
-{d:"1994-09-18",h:"Zeytinburnuspor",a:"Denizlispor",s:"1-0",goal:"7'",note:"Erol'un ortasından kafayla maçın tek golünü atmıştır. TFF golü ayakla kaydetmiştir.",v:[["5sL-Op5KC2w","Türk Futbol Tarihi"]],hl:[["5sL-Op5KC2w",8,"7. dakika, kafa golü"]]},
-{d:"1994-09-25",h:"Altay",a:"Zeytinburnuspor",s:"2-0",v:[["K0TZZqN2Ufs","Türk Futbol Tarihi"]]},
-{d:"1994-10-02",h:"Zeytinburnuspor",a:"Kocaelispor",s:"3-2",cap:true,note:"Spiker anlatımında \"Kaptan Büyük Ahmet\" olarak anılmaktadır.",v:[["RT2Uvo22Jus","Türk Futbol Tarihi"]],hl:[["RT2Uvo22Jus",62,"73. dakika, kaptan olarak pas veriyor"]]},
-{d:"1994-10-09",h:"Antalyaspor",a:"Zeytinburnuspor",s:"4-0"},
-{d:"1994-10-16",h:"Zeytinburnuspor",a:"Vanspor",s:"0-2",v:[["EGvYfRg0kjE","Türk Futbol Tarihi"]]},
-{d:"1994-10-23",h:"Kayserispor",a:"Zeytinburnuspor",s:"2-1"},
-{d:"1994-10-30",h:"Zeytinburnuspor",a:"Adana Demirspor",s:"4-2"},
-{d:"1994-11-06",h:"Samsunspor",a:"Zeytinburnuspor",s:"1-1"},
-{d:"1994-11-13",h:"Zeytinburnuspor",a:"Trabzonspor",s:"1-6"},
-{d:"1994-11-20",h:"Beşiktaş",a:"Zeytinburnuspor",s:"3-1",role:"İlk 11 (8 numara)",note:"İnönü Stadı. Hakem Ahmet Çakar. Beşiktaş'ın ilk golü Rıza'dan.",v:[["AidVOSjDtEM","Futbolkolik"],["lLzlfX2qsBI","Geniş özet"],["ZkKp5GQ2Sy4","Özet"]],hl:[["AidVOSjDtEM",77,"Kadro tanıtımı, 8 numara"]]},
-{d:"1994-11-27",h:"Bursaspor",a:"Zeytinburnuspor",s:"3-0"},
-{d:"1994-12-18",h:"Galatasaray",a:"Zeytinburnuspor",s:"4-0",role:"İlk 11 (8 numara)",note:"İlk yarının son maçı. 17 dakikalık geniş özet.",v:[["M3GW1rTFicg","Futbolkolik"],["R7LteBkw5yU","Sarı Kırmızı Arşiv"]],hl:[["M3GW1rTFicg",61,"Kadro tanıtımı, 8 numara"],["M3GW1rTFicg",138,"Orta saha mücadelesi"],["M3GW1rTFicg",497,"Şut"],["M3GW1rTFicg",683,"Ceza sahasında karambol"]]},
-{d:"1995-01-22",h:"Fenerbahçe",a:"Zeytinburnuspor",s:"3-0",v:[["gMtiKjOb0QU","Maç Anıları"]]},
-{d:"1995-01-29",h:"Zeytinburnuspor",a:"Gençlerbirliği",s:"0-0"},
-{d:"1995-02-04",h:"Ankaragücü",a:"Zeytinburnuspor",s:"2-2"},
-{d:"1995-03-05",h:"Kocaelispor",a:"Zeytinburnuspor",s:"4-1"},
-{d:"1995-03-12",h:"Zeytinburnuspor",a:"Antalyaspor",s:"2-2",note:"TFF kayıtlarındaki son resmi maç."}
-];
-
-const OWN = ["Bakırköyspor","Zeytinburnuspor"];
-const AY = ["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
-const yt = (id,t)=>"https://www.youtube.com/watch?v="+id+(t!=null?("&t="+t+"s"):"");
-const th = id=>"https://i.ytimg.com/vi/"+id+"/mqdefault.jpg";
-const mmss = s=>Math.floor(s/60)+":"+String(s%60).padStart(2,"0");
-const esc = s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const fmtDate = d=>{const [y,m,g]=d.split("-");return {short:g+"."+m+"."+y,long:+g+" "+AY[+m-1]+" "+y};};
-const seasonOf = d=>{const [y,m]=d.split("-").map(Number);const s=m>=7?y:y-1;return s+"-"+String(s+1).slice(2);};
-const clubOf = m=>(m.h==="Zeytinburnuspor"&&m.d>"1993-07")||(m.a==="Zeytinburnuspor"&&m.d>"1993-07")?"zb":"bk";
-const A = 'target="_blank" rel="noopener"';
-
-M.forEach(m=>{m.season=seasonOf(m.d);m.club=clubOf(m);m.v=m.v||[];m.hl=m.hl||[];});
-
-/* Stats */
-const goals = M.filter(m=>m.goal).length, withV = M.filter(m=>m.v.length).length, hlN = M.filter(m=>m.hl.length).length;
-document.getElementById("stats").innerHTML=[
- [M.length,"resmi maç (TFF kaydı)"],[goals,"gol (TFF kaydı)"],[withV,"maçın video kaydı"],[hlN,"maçta spiker anlatımında anılıyor"]
-].map(([n,t])=>`<div class="stat"><b class="num">${n}</b><span>${t}</span></div>`).join("");
-
-/* Summary */
-const seasons=[...new Set(M.map(m=>m.season))];
-document.querySelector("#summary tbody").innerHTML=seasons.map(s=>{
- const ms=M.filter(m=>m.season===s);const c=ms[0].club;
- return `<tr><td><a href="#s-${s}">${s}</a></td><td><span class="club-dot c-${c}"></span>${c==="bk"?"Bakırköyspor":"Zeytinburnuspor"}</td><td class="num">${ms.length}</td><td class="num">${ms.filter(m=>m.goal).length}</td><td class="num">${ms.filter(m=>m.v.length).length}</td></tr>`;
-}).join("")+`<tr><td><b>Toplam</b></td><td></td><td class="num"><b>${M.length}</b></td><td class="num"><b>${goals}</b></td><td class="num"><b>${withV}</b></td></tr>`;
-
-/* Mosaic */
-const mos=[["6Qo5cxfP-Cg","Fenerbahçe 4-2 Bakırköyspor"],["ZKhJh6sq8wU","Bakırköyspor 3-6 Beşiktaş"],["FX78xj-j7b4","Galatasaray 3-0 Bakırköyspor"],["CASijyNrlbE","Galatasaray 3-0 Zeytinburnuspor"],["qh_3EgxsQS0","Zeytinburnuspor 0-0 Trabzonspor"],["e2cc7_favVs","Zeytinburnuspor 1-4 Fenerbahçe"]];
-document.getElementById("mosaic").innerHTML=mos.map(([id,t])=>`<a href="${yt(id)}" ${A} title="${esc(t)}"><img src="${th(id)}" alt="${esc(t)} maç görüntüsü" loading="lazy"><span>${esc(t)}</span></a>`).join("");
-
-/* Gallery: goal/assist matches with video + notable moments */
-const featured=["1991-09-15","1992-04-26","1992-10-18","1993-02-07","1993-12-12","1994-09-18","1993-09-05","1993-03-13","1993-08-28","1994-10-02","1991-02-24","1994-08-13"];
-document.getElementById("gallery").innerHTML=featured.map(d=>M.find(m=>m.d===d)).map(m=>{
- const h=m.hl.find(x=>/gol|karşı karşıya|kaptan|şut/i.test(x[2]))||m.hl[0];
- const tag=m.goal?`<span class="b b-goal">⚽ Gol ${m.goal}</span>`:(m.cap?`<span class="b b-cap">Kaptan</span>`:"");
- const as=m.assist?`<span class="b b-assist">Asist ${m.assist}</span>`:"";
- return `<article class="card"><a class="thumb" href="${yt(h[0],h[1])}" ${A}><img src="${th(h[0])}" alt="${esc(m.h+" "+m.s+" "+m.a)}" loading="lazy"><span class="play">▶ ${mmss(h[1])}</span></a>
- <div class="card-body"><span class="card-date">${fmtDate(m.d).long}</span><span class="card-title">${esc(m.h)} ${m.s} ${esc(m.a)}</span><div class="badges">${tag}${as}</div><span class="card-text">${esc(h[2])}</span></div></article>`;
-}).join("");
-
-/* Season chips */
-const ctr=document.getElementById("controls");
-seasons.forEach(s=>{const a=document.createElement("a");a.className="chip";a.href="#s-"+s;a.textContent=s;ctr.appendChild(a);});
-
-/* Season tables */
-const teamHTML=m=>{const t=n=>OWN.includes(n)&&((n==="Zeytinburnuspor")===(m.club==="zb"))?`<span class="own">${esc(n)}</span>`:esc(n);return `${t(m.h)}<span class="m-score">${m.s}</span>${t(m.a)}`;};
-const rowHTML=m=>{
- const f=fmtDate(m.d);
- const badges=[m.goal&&`<span class="b b-goal">⚽ Gol ${m.goal}</span>`,m.assist&&`<span class="b b-assist">Asist ${m.assist}</span>`,m.red&&`<span class="b b-red">Kırmızı kart ${m.red}</span>`,m.cap&&`<span class="b b-cap">Kaptan</span>`,m.role&&`<span class="b b-role">${esc(m.role)}</span>`].filter(Boolean).join("");
- const hl=m.hl.length?`<ul class="hl">${m.hl.map(([id,t,txt])=>`<li><a href="${yt(id,t)}" ${A}><span class="ts">${mmss(t)}</span><span class="hl-t">${esc(txt)}</span></a></li>`).join("")}</ul>`:"";
- const note=m.note?`<p class="m-note">${esc(m.note)}</p>`:"";
- const det=note+hl||`<span class="muted">Ek bilgi bulunmamaktadır.</span>`;
- const vid=m.v.length?`<a class="vid" href="${yt(m.v[0][0])}" ${A}><span class="thumb"><img src="${th(m.v[0][0])}" alt="${esc(m.h+" "+m.s+" "+m.a)} video kaydı" loading="lazy"><span class="play">▶ ${esc(m.v[0][1])}</span></span></a>${m.v.length>1?`<div class="alts">Diğer kayıtlar: ${m.v.slice(1).map((v,i)=>`<a href="${yt(v[0])}" ${A}>${esc(v[1])}</a>`).join(" · ")}</div>`:""}`:`<span class="none">Video kaydı bulunamadı</span>`;
- const flags=[m.v.length?"video":"",m.goal||m.assist?"goal":"",m.hl.length?"hl":""].join(" ");
- return `<tr class="${m.goal?"is-goal":""}" data-f="${flags}">
-  <td class="m-date" data-l="Tarih">${f.short}</td>
-  <td class="c-teams" data-l="Maç"><div class="m-teams">${teamHTML(m)}</div><span class="m-comp">${esc(m.comp||"1. Lig")}</span></td>
-  <td data-l="Ahmet Kanca">${badges||`<span class="muted">Maç kadrosunda</span>`}</td>
-  <td data-l="Ayrıntılar">${det}</td>
-  <td class="c-video" data-l="Video">${vid}</td>
- </tr>`;
+const AY=["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas","Ara"];
+const AYL=["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
+const A='target="_blank" rel="noopener"';
+const PLAY='<svg viewBox="0 0 10 10" aria-hidden="true"><path d="M1.5 1v8l7-4z"/></svg>';
+const yt=(id,t)=>"https://www.youtube.com/watch?v="+id+(t!=null?"&t="+t+"s":"");
+const mmss=s=>Math.floor(s/60)+":"+String(s%60).padStart(2,"0");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const norm=s=>s.toLocaleLowerCase("tr").normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/ı/g,"i");
+const CLUBS={
+  bk:{name:"Bakırköyspor",years:"1989-1993",logo:"https://upload.wikimedia.org/wikipedia/tr/5/53/Bak%C4%B1rk%C3%B6yspor.png"},
+  zb:{name:"Zeytinburnuspor",years:"1993-1996",logo:"https://upload.wikimedia.org/wikipedia/commons/2/2a/Zeytinburnuspor_Logo.png"}
 };
-document.getElementById("seasons").innerHTML=seasons.map(s=>{
- const ms=M.filter(m=>m.season===s);const c=ms[0].club;
- return `<div class="season" id="s-${s}" data-season>
-  <div class="season-head"><h3>${s} sezonu</h3><span class="club ${c}">${c==="bk"?"Bakırköyspor":"Zeytinburnuspor"}</span><span class="season-meta">${ms.length} maç · ${ms.filter(m=>m.goal).length} gol · ${ms.filter(m=>m.v.length).length} videolu maç</span></div>
-  <table class="tbl matches"><thead><tr><th>Tarih</th><th>Maç</th><th>Ahmet Kanca</th><th>Ayrıntılar ve öne çıkan anlar</th><th>Video</th></tr></thead><tbody>${ms.map(rowHTML).join("")}</tbody></table>
- </div>`;
+M.forEach(m=>{
+  const [y,mo]=m.d.split("-").map(Number); const s=mo>=7?y:y-1;
+  m.season=s+"-"+String(s+1).slice(2);
+  m.club=m.d>"1993-07"?"zb":"bk";
+  m.home=m.h===CLUBS[m.club].name; m.opp=m.home?m.a:m.h;
+  const [x,z]=m.s.split("-").map(Number); const gf=m.home?x:z, ga=m.home?z:x;
+  m.res=gf>ga?"G":gf<ga?"M":"B"; m.my=gf+"-"+ga;
+  m.v=m.v||[]; m.hl=m.hl||[];
+});
+const seasons=[...new Set(M.map(m=>m.season))];
+const fd=d=>{const [y,m,g]=d.split("-");return {short:+g+" "+AY[+m-1],year:y,long:+g+" "+AYL[+m-1]+" "+y};};
+
+/* ---- Özet ---- */
+document.getElementById("tz").innerHTML=[["Resmi maç",M.length],["Gol",M.filter(m=>m.goal).length],["Videolu maç",M.filter(m=>m.v.length).length]].map(([l,n])=>`<div><span>${l}</span><b>${n}</b></div>`).join("");
+document.getElementById("clubs").innerHTML=Object.entries(CLUBS).map(([k,c])=>{const ms=M.filter(m=>m.club===k);return `<div class="stat ${k}"><div class="c"><img src="${c.logo}" alt="">${c.name}</div><div class="v">${c.years}</div><div class="g">${ms.length} maç · ${ms.filter(m=>m.goal).length} gol</div></div>`;}).join("");
+document.getElementById("tiles").innerHTML=M.filter(m=>m.goal).map(m=>{
+  const h=m.hl.find(x=>/gol/i.test(x[2])&&!/asist/i.test(x[2])); const href=h?yt(h[0],h[1]):(m.v[0]?yt(m.v[0][0]):null); const f=fd(m.d);
+  const inner=`${href?`<span class="p">${PLAY}</span>`:""}<img src="${CLUBS[m.club].logo}" alt=""><div class="s">${m.my}</div><div class="o">${m.home?"vs":"@"} ${esc(m.opp)}</div><div class="m">⚽ ${m.goal} · ${f.short} ${f.year.slice(2)}</div>`;
+  return href?`<a class="tile ${m.res}" href="${href}" ${A} title="${esc(m.h+" "+m.s+" "+m.a)}">${inner}</a>`:`<div class="tile ${m.res}" title="${esc(m.h+" "+m.s+" "+m.a)} · video yok">${inner}</div>`;
+}).join("");
+const featured=["1991-09-15","1993-02-07","1992-10-18","1994-09-18","1993-12-12","1992-04-26","1993-09-05","1993-03-13","1993-08-28","1994-10-02","1991-02-24","1994-08-13"];
+document.getElementById("moments").innerHTML=featured.map(d=>M.find(m=>m.d===d)).map(m=>{
+  const f=fd(m.d); const main=m.hl.find(x=>/gol/i.test(x[2])&&!/asist/i.test(x[2]))||m.hl.find(x=>/karşı karşıya|kaptan/i.test(x[2]))||m.hl[0];
+  const pill=m.goal?`<span class="pill goal">⚽ Gol ${m.goal}</span>`:m.cap?`<span class="pill cap">Kaptan</span>`:"";
+  return `<div class="card mc ${m.club}"><div class="top"><span class="lg">${CLUBS[m.club].name} · ${f.long}</span><span class="venue">${m.home?"🏠 İç saha":"✈️ Deplasman"}</span></div>
+  <div class="teams">${esc(m.h)} ${m.s} ${esc(m.a)} ${pill}</div>
+  <div class="desc">${esc(main[2])}${m.assist?`. Aynı maçta ${m.assist} asist.`:""}</div>
+  <div class="foot"><a class="play dark" href="${yt(main[0],main[1])}" ${A}>${PLAY}<span><b>${mmss(main[1])}</b>'den izle</span></a>${m.hl.filter(x=>x!==main).slice(0,2).map(([id,t,x])=>`<a class="play" href="${yt(id,t)}" ${A} title="${esc(x)}">${PLAY}<b>${mmss(t)}</b></a>`).join("")}</div></div>`;
 }).join("");
 
-/* Filters */
-ctr.querySelectorAll("button[data-filter]").forEach(b=>b.addEventListener("click",()=>{
- ctr.querySelectorAll("button[data-filter]").forEach(x=>x.setAttribute("aria-pressed",x===b));
- const f=b.dataset.filter;
- document.querySelectorAll("#seasons tbody tr").forEach(tr=>{tr.hidden=!(f==="all"||tr.dataset.f.split(" ").includes(f));});
- document.querySelectorAll("[data-season]").forEach(s=>{s.hidden=!s.querySelector("tbody tr:not([hidden])");});
- document.getElementById("maclar").scrollIntoView({behavior:"smooth"});
-}));
+/* ---- Maçlar ---- */
+const st={season:"all",q:"",home:false,away:false,goal:false,vid:false,desc:false};
+const sc=document.getElementById("seasons");
+sc.innerHTML=[["all","Tümü",M.length],...seasons.map(s=>[s,s,M.filter(m=>m.season===s).length])].map(([k,l,n])=>`<button class="chip" data-s="${k}" aria-pressed="${k==="all"}">${l}<small>${n}</small></button>`).join("");
+sc.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;st.season=b.dataset.s;sc.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b));render();});
+document.getElementById("q").addEventListener("input",e=>{st.q=norm(e.target.value.trim());render();});
+[["fHome","home","fAway"],["fAway","away","fHome"],["fGoal","goal"],["fVid","vid"]].forEach(([id,k,other])=>{const b=document.getElementById(id);b.addEventListener("click",()=>{st[k]=!st[k];b.setAttribute("aria-pressed",st[k]);if(other&&st[k]){const o=document.getElementById(other);st[o.id==="fHome"?"home":"away"]=false;o.setAttribute("aria-pressed",false);}render();});});
+const sb=document.getElementById("fSort");sb.addEventListener("click",()=>{st.desc=!st.desc;sb.textContent=st.desc?"↑ Yeniden eskiye":"↓ Eskiden yeniye";render();});
+let expanded=false;
+document.getElementById("expand").addEventListener("click",e=>{expanded=!expanded;document.querySelectorAll("#list details").forEach(d=>d.open=expanded);e.target.textContent=expanded?"Tümünü kapat":"Tümünü aç";});
+
+function row(m){
+  const f=fd(m.d);
+  const nm=(n,own)=>own?`<span class="own">${esc(n)}</span>`:esc(n);
+  const tags=[m.goal&&`<span class="goal">⚽ Gol ${m.goal}</span>`,m.assist&&`<span class="goal">🅰️ Asist ${m.assist}</span>`,m.red&&`<span class="red">🟥 ${m.red}</span>`,m.cap&&`<span class="cap">Kaptan</span>`,m.comp&&`<span>🏆 ${esc(m.comp)}</span>`].filter(Boolean).join("");
+  const rt={G:"Galibiyet",B:"Beraberlik",M:"Mağlubiyet"}[m.res];
+  const badge=m.v.length?`<span class="res v ${m.res}" title="${rt} · ${m.v.length} video">${PLAY}${m.res}</span>`:`<span class="res ${m.res}" title="${rt}">${m.res}</span>`;
+  const head=`<div class="md"><b>${f.short}</b>${f.year}</div><div class="mt"><div class="tm">${nm(m.h,m.home)}<span class="sc">${m.s}</span>${nm(m.a,!m.home)}</div>${tags?`<div class="tg">${tags}</div>`:""}</div>${badge}`;
+  const body=[m.role&&`<div class="role">Kadro: <b>${esc(m.role)}</b></div>`,m.note&&`<p>${esc(m.note)}</p>`,
+    m.hl.length&&`<ul>${m.hl.map(([id,t,x])=>`<li><a class="play" href="${yt(id,t)}" ${A}>${PLAY}<b>${mmss(t)}</b></a><span>${esc(x)}</span></li>`).join("")}</ul>`,
+    m.v.length&&`<div><div class="vl">Video kayıtları</div><div class="vs">${m.v.map(v=>`<a class="play" href="${yt(v[0])}" ${A}>${PLAY}${esc(v[1])}</a>`).join("")}</div></div>`].filter(Boolean).join("");
+  const cls=`m${m.goal?" goal":""}`;
+  return body?`<details class="${cls}"><summary class="mr">${head}</summary><div class="mb">${body}</div></details>`:`<div class="${cls} static"><div class="mr">${head}</div></div>`;
+}
+function render(){
+  const ms=M.filter(m=>(st.season==="all"||m.season===st.season)&&(!st.q||norm(m.opp).includes(st.q))&&(!st.home||m.home)&&(!st.away||!m.home)&&(!st.goal||m.goal||m.assist)&&(!st.vid||m.v.length))
+    .sort((a,b)=>st.desc?b.d.localeCompare(a.d):a.d.localeCompare(b.d));
+  document.getElementById("count").textContent=ms.length+" maç";
+  const list=document.getElementById("list");
+  if(!ms.length){list.innerHTML=`<div class="empty">Bu filtrelere uyan maç yok.</div>`;return;}
+  list.innerHTML=(st.desc?[...seasons].reverse():seasons).filter(s=>ms.some(m=>m.season===s)).map(s=>{
+    const g=ms.filter(m=>m.season===s), c=CLUBS[g[0].club];
+    const w=g.filter(m=>m.res==="G").length,dr=g.filter(m=>m.res==="B").length,l=g.filter(m=>m.res==="M").length,gl=g.filter(m=>m.goal).length;
+    return `<div class="season"><div class="shead"><img src="${c.logo}" alt=""><div><b>${s}</b><span>${c.name} · ${g.length} maç</span></div><div class="rec"><i>${w}G ${dr}B ${l}M</i>${gl?`<i class="g">⚽ ${gl}</i>`:""}</div></div>${g.map(row).join("")}</div>`;
+  }).join("");
+  expanded=false;document.getElementById("expand").textContent="Tümünü aç";
+}
+render();
+
+/* ---- Tabs ---- */
+function show(v){
+  if(!["ozet","maclar","kaynaklar"].includes(v)) v="ozet";
+  document.querySelectorAll(".view").forEach(x=>x.hidden=x.id!=="v-"+v);
+  document.querySelectorAll(".tabbar a").forEach(a=>{if(a.dataset.v===v)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
+  window.scrollTo(0,0);
+}
+document.querySelectorAll("[data-goto]").forEach(b=>b.addEventListener("click",()=>{location.hash=b.dataset.goto;}));
+window.addEventListener("hashchange",()=>show(location.hash.slice(1)));
+/* Dış bağlantılar her zaman yeni sekmede açılsın */
+document.addEventListener("click",e=>{const a=e.target.closest('a[href^="http"]');if(!a||e.defaultPrevented)return;e.preventDefault();e.stopPropagation();const w=window.open(a.href,"_blank","noopener");if(!w)location.href=a.href;},true);
+show(location.hash.slice(1));
 </script>
 </body>
 </html>
