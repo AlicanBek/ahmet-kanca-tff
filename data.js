@@ -8,7 +8,7 @@ const M = [
 {d:"1990-10-07",h:"Adanaspor",a:"Bakırköyspor",s:"1-1",note:"Bir penaltı pozisyonu maçın önüne geçmiştir.",v:[["X9RBNn6MjfQ","Türk Futbol Tarihi"]]},
 {d:"1990-10-20",h:"Bakırköyspor",a:"Gençlerbirliği",s:"2-1"},
 {d:"1990-10-27",h:"Galatasaray",a:"Bakırköyspor",s:"2-1",note:"Galatasaray'ın galibiyet golü Uğur Tütüneker'den.",v:[["LPfUHWqmSzE","Maç Anıları"],["IVrMyQCNyz4","Yiğit Alp"],["H08rKrqxT98","Türk Futbol Tarihi"]]},
-{d:"1990-11-03",h:"Bakırköyspor",a:"Fenerbahçe",s:"2-2",v:[["o3yBBPs_K74","Maç Anıları"],["WxGCcHGIf0Y","Peen"]]},
+{d:"1990-11-03",h:"Bakırköyspor",a:"Fenerbahçe",s:"2-2",v:[["o3yBBPs_K74","Maç Anıları"],["WxGCcHGIf0Y","Peen"],["dm:x87nldg","Dailymotion"]]},
 {d:"1990-11-18",h:"Gaziantepspor",a:"Bakırköyspor",s:"0-1"},
 {d:"1990-11-25",h:"Bakırköyspor",a:"Aydınspor",s:"3-1",role:"Kadroda",note:"TRT kadro bilgisinde \"b.ahmet (kanca)\" olarak yer almaktadır.",v:[["TU03uoTF4q4","TRT Spor Arşiv"]]},
 {d:"1990-12-02",h:"Boluspor",a:"Bakırköyspor",s:"2-0",v:[["G1yJh6_sa3g","TRT Spor Arşiv"]]},
