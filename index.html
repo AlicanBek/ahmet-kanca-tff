@@ -7,8 +7,13 @@
 <meta name="description" content="Bakırköyspor ve Zeytinburnuspor formalarıyla 1990-1995 yılları arasında oynanan resmi maçların, gollerin ve video kayıtlarının arşivi.">
 <meta property="og:title" content="Ahmet Kanca · Maç Arşivi (1990-1995)">
 <meta property="og:description" content="Bakırköyspor ve Zeytinburnuspor dönemine ait 117 resmi maç, 11 gol ve 66 maçın video kaydı.">
-<meta property="og:image" content="https://i.ytimg.com/vi/6Qo5cxfP-Cg/hqdefault.jpg">
+<meta property="og:image" content="https://alicanbek.github.io/ahmet-kanca-tff/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://alicanbek.github.io/ahmet-kanca-tff/">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://alicanbek.github.io/ahmet-kanca-tff/og.png">
 <meta name="theme-color" content="#efede8">
 <style>
 :root{
@@ -165,6 +170,77 @@ details.m[open] .mr{background:var(--soft)}
 .tabbar a[aria-current="page"] .i{filter:none;opacity:1}
 footer{text-align:center;color:var(--muted);font-size:12px;margin:22px 8px 0}
 :focus-visible{outline:2px solid var(--bk);outline-offset:2px;border-radius:8px}
+
+/* Mobil akış */
+.hero{display:flex;flex-direction:column}
+.hero-l,.hero-r{display:contents}
+.hero .go{order:9;align-self:flex-start}
+.hero .intro{margin:10px 0 0;font-size:14px;line-height:1.5;color:#cfcfcf}
+.side{display:contents}
+.tb-brand{display:none!important}
+.mono{width:30px;height:30px;border-radius:8px;background:#1c1c1c;color:var(--gold);display:grid;place-items:center;font-size:12px;font-weight:800;letter-spacing:.5px}
+
+/* Geniş ekran */
+@media (min-width:900px){
+  main{max-width:1180px;padding:100px 32px 72px}
+  .tabbar{top:0;bottom:auto;border-top:0;border-bottom:1px solid var(--line);padding-bottom:0;background:rgba(239,237,232,.88)}
+  .tabbar nav{max-width:1180px;padding:0 32px;display:flex;align-items:center;gap:4px;height:64px}
+  .tabbar .tb-brand{display:flex!important;flex-direction:row;align-items:center;gap:10px;margin-right:auto;padding:0;font-size:16px;font-weight:800;color:var(--ink)}
+  .tabbar a{flex-direction:row;gap:8px;padding:8px 16px;border-radius:999px;font-size:14px}
+  .tabbar a .i{font-size:16px}
+  .tabbar a:not(.tb-brand):hover{background:rgba(0,0,0,.05);color:var(--ink)}
+  .tabbar a[aria-current="page"]{background:#1c1c1c;color:#fff}
+  .tabbar a[aria-current="page"]:hover{background:#1c1c1c;color:#fff}
+
+  .hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:48px;align-items:center;padding:40px 40px 36px;border-radius:24px}
+  .hero-l,.hero-r{display:block}
+  .hero .name{font-size:56px;line-height:1.05}
+  .hero .meta{font-size:16px}
+  .hero .intro{font-size:16px;max-width:46ch;margin-top:14px}
+  .hero .go{margin-top:22px;padding:10px 18px;font-size:14.5px}
+  .tz{margin-top:0}
+  .tz div{padding:14px 6px}
+  .tz b{font-size:34px}
+  .strip{padding:12px 14px;margin-top:10px}
+
+  .stats{gap:16px;margin-top:16px}
+  .stat{padding:20px 22px;border-radius:18px}
+  .stat .c{font-size:12px;letter-spacing:.8px}
+  .stat .c img{width:30px;height:30px;flex-basis:30px}
+  .stat .v{font-size:30px;margin-top:10px}
+  .stat .g{font-size:13.5px}
+
+  .label{margin:36px 4px 12px;font-size:13px}
+  .form{padding:16px 16px 18px;border-radius:18px}
+  .tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));overflow:visible;gap:10px}
+  .tile{flex:none;padding:14px 8px 12px}
+  .tile img{width:34px;height:34px}
+  .tile .s{font-size:20px}
+
+  #moments{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  #moments .card{margin:0;display:flex;flex-direction:column;border-radius:18px;padding:18px 20px}
+  .mc .desc{flex:1}
+
+  .mlayout{display:grid;grid-template-columns:300px minmax(0,1fr);gap:32px;align-items:start}
+  .side{display:block;position:sticky;top:88px}
+  .side h1{margin-top:0}
+  .side .controls{position:static;margin:0;padding:14px 0 0;background:transparent}
+  #seasons{flex-direction:column;overflow:visible;gap:6px}
+  #seasons .chip{display:flex;justify-content:space-between;padding:11px 16px;border-radius:12px;font-size:14px}
+  .side .chips:not(#seasons){flex-wrap:wrap;overflow:visible}
+  .search{margin:12px 0}
+  .count{margin-top:12px}
+  #list .season:first-child{margin-top:0}
+  .season{border-radius:18px}
+  .shead{padding:16px 20px}
+  .mr{padding:12px 20px;grid-template-columns:70px minmax(0,1fr) auto}
+  .mt .tm{font-size:15px}
+  .mb{padding-left:100px}
+
+  .src-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+  footer{margin-top:40px}
+}
+@media (min-width:900px) and (max-width:1100px){#moments{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 </head>
 <body>
@@ -173,13 +249,18 @@ footer{text-align:center;color:var(--muted);font-size:12px;margin:22px 8px 0}
   <!-- ÖZET -->
   <div class="view" id="v-ozet">
     <div class="hero">
-      <div class="k">⚽ Maç arşivi · 1990-1995</div>
-      <div class="name">Ahmet Kanca</div>
-      <div class="meta">Orta saha · 16 Mayıs 1963, Sürmene</div>
-      <div class="tz" id="tz"></div>
-      <div class="strip"><span class="cl">Spikerlerin deyişiyle</span><b>"Büyük Ahmet"</b></div>
-      <div class="strip"><span class="cl">Kaptanlık</span><b>Zeytinburnuspor · 94-95</b></div>
-      <button class="go" data-goto="maclar">Tüm maçlar →</button>
+      <div class="hero-l">
+        <div class="k">⚽ Maç arşivi · 1990-1995</div>
+        <div class="name">Ahmet Kanca</div>
+        <div class="meta">Orta saha · 16 Mayıs 1963, Sürmene</div>
+        <p class="intro">Bakırköyspor ve Zeytinburnuspor formalarıyla 1. Lig'de oynadığı resmi maçların, gollerinin ve bugüne ulaşan video kayıtlarının arşivi.</p>
+        <button class="go" data-goto="maclar">Tüm maçlar →</button>
+      </div>
+      <div class="hero-r">
+        <div class="tz" id="tz"></div>
+        <div class="strip"><span class="cl">Spikerlerin deyişiyle</span><b>"Büyük Ahmet"</b></div>
+        <div class="strip"><span class="cl">Kaptanlık</span><b>Zeytinburnuspor · 94-95</b></div>
+      </div>
     </div>
     <div class="stats" id="clubs"></div>
 
@@ -193,6 +274,8 @@ footer{text-align:center;color:var(--muted);font-size:12px;margin:22px 8px 0}
 
   <!-- MAÇLAR -->
   <div class="view" id="v-maclar" hidden>
+   <div class="mlayout">
+   <aside class="side">
     <h1>Maçlar</h1>
     <p class="sub">TFF kayıtlarındaki 117 resmi maç · ayrıntı için dokun</p>
     <div class="controls">
@@ -207,13 +290,16 @@ footer{text-align:center;color:var(--muted);font-size:12px;margin:22px 8px 0}
       </div>
       <div class="count"><span id="count"></span><button id="expand">Tümünü aç</button></div>
     </div>
+   </aside>
     <div id="list"></div>
+   </div>
   </div>
 
   <!-- KAYNAKLAR -->
   <div class="view" id="v-kaynaklar" hidden>
     <h1>Kaynaklar</h1>
     <p class="sub">Bilgilerin nereden geldiği</p>
+    <div class="src-grid"><div>
     <div class="label">Kaynaklar</div>
     <div class="card src"><ul>
       <li><a href="https://www.tff.org/Default.aspx?pageId=30&kisiId=497749" target="_blank" rel="noopener">TFF Futbol Bilgi Bankası</a>: maç listesi, goller, kartlar ve lisans hareketleri.</li>
@@ -222,16 +308,19 @@ footer{text-align:center;color:var(--muted);font-size:12px;margin:22px 8px 0}
       <li><a href="https://ayaktakileroturanlar.com/kadrolar/bakirkoyspor-1989-1990-sezonu-kadrosu" target="_blank" rel="noopener">Bakırköyspor 1989-90 kadro fotoğrafı</a>: 1. Lig'e yükselme sezonu.</li>
       <li>Videolar: TRT Spor Arşiv, Futbolkolik, Maç Anıları, Türk Futbol Tarihi ve diğer YouTube kanalları.</li>
     </ul></div>
+    </div><div>
     <div class="label">Yöntem</div>
     <div class="card src">
       <p>Videolar maç tarihi, takımlar ve skor üzerinden eşleştirilmiştir. Zaman damgaları otomatik altyazı dökümlerinden alınmıştır, birkaç saniyelik sapma olabilir.</p>
       <p>Bakırköyspor kadrosunda iki Ahmet olduğundan spikerler Ahmet Kanca'ya "Büyük Ahmet", diğerine "Küçük Ahmet" demiştir. Yalnızca açıkça Ahmet Kanca'yı işaret eden anlar listelenmiştir.</p>
       <p>TFF kayıtlarında 11 gol bulunur, Mackolik 14 gol gösterir. 1989-90 sezonu (2. Lig) TFF kayıtlarında olmadığı için listede yer almaz.</p>
     </div>
+    </div></div>
   </div>
 </main>
 
 <div class="tabbar"><nav aria-label="Bölümler">
+  <a class="tb-brand" href="#ozet"><span class="mono">AK</span>Ahmet Kanca</a>
   <a href="#ozet" data-v="ozet"><span class="i">⚽</span>Özet</a>
   <a href="#maclar" data-v="maclar"><span class="i">📋</span>Maçlar</a>
   <a href="#kaynaklar" data-v="kaynaklar"><span class="i">📚</span>Kaynaklar</a>
@@ -324,7 +413,7 @@ render();
 function show(v){
   if(!["ozet","maclar","kaynaklar"].includes(v)) v="ozet";
   document.querySelectorAll(".view").forEach(x=>x.hidden=x.id!=="v-"+v);
-  document.querySelectorAll(".tabbar a").forEach(a=>{if(a.dataset.v===v)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
+  document.querySelectorAll(".tabbar a[data-v]").forEach(a=>{if(a.dataset.v===v)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current");});
   window.scrollTo(0,0);
 }
 document.querySelectorAll("[data-goto]").forEach(b=>b.addEventListener("click",()=>{location.hash=b.dataset.goto;}));
