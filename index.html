@@ -134,9 +134,10 @@ details.m[open] .mr{background:var(--soft)}
 .tg .vid{background:transparent;color:var(--muted);font-weight:600;padding:1px 2px}
 .res{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff}
 .res.G{background:var(--win)} .res.B{background:var(--draw)} .res.M{background:var(--loss)}
-.res.v{width:auto;height:26px;padding:0 9px 0 8px;border-radius:999px;display:inline-flex;align-items:center;gap:5px;box-shadow:0 2px 6px rgba(0,0,0,.15);transition:transform .12s ease}
-.res.v svg{width:8px;height:8px;fill:#fff}
-.mr:active .res.v{transform:scale(.95)}
+.rs{display:flex;align-items:center;gap:6px}
+.vb{width:26px;height:26px;border-radius:50%;background:#1c1c1c;display:grid;place-items:center;box-shadow:0 2px 6px rgba(0,0,0,.15);transition:transform .12s ease}
+.vb svg{width:9px;height:9px;fill:#fff;margin-left:2px}
+.mr:active .vb{transform:scale(.92)}
 .mr{grid-template-columns:52px minmax(0,1fr) auto}
 .mb{padding:4px 16px 14px 78px;background:var(--soft);display:grid;gap:10px;font-size:14px}
 .mb .role{color:var(--ink-2)} .mb .role b{color:var(--ink)}
@@ -185,7 +186,7 @@ footer{text-align:center;color:var(--muted);font-size:12px;margin:22px 8px 0}
     <div class="label">Goller <small>TFF kaydı · 11 gol</small></div>
     <div class="form"><div class="t">Gol attığı maçlar <span>· videosu olanlara dokun</span></div><div class="tiles" id="tiles"></div></div>
 
-    <div class="label">Öne çıkan anlar <small>videoyu o saniyeden açar</small></div>
+    <div class="label">Öne çıkan anlar</div>
     <div id="moments"></div>
     <footer>Kamuya açık kaynaklardan derlenmiştir. Videoların hakları ilgili yayıncılara aittir.</footer>
   </div>
@@ -296,7 +297,7 @@ function row(m){
   const nm=(n,own)=>own?`<span class="own">${esc(n)}</span>`:esc(n);
   const tags=[m.goal&&`<span class="goal">⚽ Gol ${m.goal}</span>`,m.assist&&`<span class="goal">🅰️ Asist ${m.assist}</span>`,m.red&&`<span class="red">🟥 ${m.red}</span>`,m.cap&&`<span class="cap">Kaptan</span>`,m.comp&&`<span>🏆 ${esc(m.comp)}</span>`].filter(Boolean).join("");
   const rt={G:"Galibiyet",B:"Beraberlik",M:"Mağlubiyet"}[m.res];
-  const badge=m.v.length?`<span class="res v ${m.res}" title="${rt} · ${m.v.length} video">${PLAY}${m.res}</span>`:`<span class="res ${m.res}" title="${rt}">${m.res}</span>`;
+  const badge=`<span class="rs">${m.v.length?`<span class="vb" title="${m.v.length} video">${PLAY}</span>`:""}<span class="res ${m.res}" title="${rt}">${m.res}</span></span>`;
   const head=`<div class="md"><b>${f.short}</b>${f.year}</div><div class="mt"><div class="tm">${nm(m.h,m.home)}<span class="sc">${m.s}</span>${nm(m.a,!m.home)}</div>${tags?`<div class="tg">${tags}</div>`:""}</div>${badge}`;
   const body=[m.role&&`<div class="role">Kadro: <b>${esc(m.role)}</b></div>`,m.note&&`<p>${esc(m.note)}</p>`,
     m.hl.length&&`<ul>${m.hl.map(([id,t,x])=>`<li><a class="play" href="${yt(id,t)}" ${A}>${PLAY}<b>${mmss(t)}</b></a><span>${esc(x)}</span></li>`).join("")}</ul>`,
